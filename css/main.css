@@ -1,0 +1,112 @@
+/*
+==============================================
+General Styling
+==============================================
+*/
+h1, h2 {
+  font-family: 'Lora', serif;
+}
+p {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial;
+}
+
+
+/*
+==============================================
+Navbar Styling
+==============================================
+*/
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #C7A75B;
+}
+
+
+/*
+==============================================
+Hero image section
+==============================================
+*/
+header {
+  position: relative;
+  padding-top: 17%;
+  padding-bottom: 15%;
+  min-height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/bg.jpg);
+  color: #fff;
+}
+#logo {
+  width: 300px
+}
+header .time {
+  margin-top: 30px;
+  font-size: 16px;
+}
+header .time .title {
+  font-weight: bold;
+  font-size: 18px;
+}
+#ingredient-1 {
+  position: absolute;
+  width: 30%;
+  left: -10%;
+  top: 15%;
+}
+#ingredient-2 {
+  position: absolute;
+  width: 10%;
+  left: 20%;
+  top: 40%;
+}
+#ingredient-3 {
+  position: absolute;
+  width: 10%;
+  left: 10%;
+  top: 55%;
+}
+#ingredient-4 {
+  position: absolute;
+  width: 13%;
+  left: -2%;
+  top: 65%;
+}
+#ingredient-5 {
+  position: absolute;
+  width: 13%;
+  left: 12%;
+  top: 73%;
+}
+#ingredient-6 {
+  position: absolute;
+  width: 13%;
+  left: 23%;
+  top: 57%;
+}
+#ingredient-7 {
+  position: absolute;
+  width: 17%;
+  right: 18%;
+  top: 30%;
+}
+#ingredient-8 {
+  position: absolute;
+  width: 8%;
+  right: 8%;
+  top: 18%;
+}
+#ingredient-9 {
+  position: absolute;
+  width: 10%;
+  right: 5%;
+  top: 40%;
+}
+#ingredient-10 {
+  position: absolute;
+  width: 20%;
+  right: 5%;
+  top: 60%;
+}
