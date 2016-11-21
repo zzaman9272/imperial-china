@@ -3,11 +3,15 @@
 General Styling
 ==============================================
 */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial;
+}
 h1, h2 {
   font-family: 'Lora', serif;
-}
-p {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial;
 }
 
 
@@ -16,8 +20,22 @@ p {
 Navbar Styling
 ==============================================
 */
+.navbar-default {
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #C7A75B;
+  color: #C7A75B;
+}
+.navbar-header i {
+  color: #fff;
+}
+.navbar-default.affix {
+  background-color: white;
+  border-color: rgba(34, 34, 34, 0.05);
 }
 
 
@@ -27,10 +45,11 @@ Hero image section
 ==============================================
 */
 header {
-  position: relative;
-  padding-top: 17%;
-  padding-bottom: 15%;
+  padding-top: 100px;
+  height: 750px;
   min-height: 100%;
+  position: relative;
+  overflow: hidden;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -39,8 +58,12 @@ header {
   background-image: url(../img/bg.jpg);
   color: #fff;
 }
+#logo-wrapper {
+  position: relative;
+  top: 90px;
+}
 #logo {
-  width: 300px
+  width: 240px
 }
 header .time {
   margin-top: 30px;
@@ -50,63 +73,42 @@ header .time .title {
   font-weight: bold;
   font-size: 18px;
 }
-#ingredient-1 {
+#dish_1 {
+  position: absolute;
+  width: 40%;
+  top: 130px;
+  left: -90px;
+}
+#dish_2 {
+  position: absolute;
+  width: 50%;
+  right: -18%;
+  top: 100px;
+}
+#dish_3 {
   position: absolute;
   width: 30%;
-  left: -10%;
-  top: 15%;
+  top: 500px;
+  left:0;
+  right:0;
+  margin:auto;
 }
-#ingredient-2 {
-  position: absolute;
-  width: 10%;
-  left: 20%;
-  top: 40%;
+
+
+/*
+==============================================
+Media Queries
+==============================================
+*/
+@media only screen and (min-width:320px) and (max-width: 900px)  {
+  header {
+    height: 620px;
+  }
 }
-#ingredient-3 {
-  position: absolute;
-  width: 10%;
-  left: 10%;
-  top: 55%;
-}
-#ingredient-4 {
-  position: absolute;
-  width: 13%;
-  left: -2%;
-  top: 65%;
-}
-#ingredient-5 {
-  position: absolute;
-  width: 13%;
-  left: 12%;
-  top: 73%;
-}
-#ingredient-6 {
-  position: absolute;
-  width: 13%;
-  left: 23%;
-  top: 57%;
-}
-#ingredient-7 {
-  position: absolute;
-  width: 17%;
-  right: 18%;
-  top: 30%;
-}
-#ingredient-8 {
-  position: absolute;
-  width: 8%;
-  right: 8%;
-  top: 18%;
-}
-#ingredient-9 {
-  position: absolute;
-  width: 10%;
-  right: 5%;
-  top: 40%;
-}
-#ingredient-10 {
-  position: absolute;
-  width: 20%;
-  right: 5%;
-  top: 60%;
+
+@media only screen and (max-width:414px) {
+  #dish_1 {
+    left: -60px;
+    top: 280px;
+  }
 }
