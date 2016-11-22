@@ -1,6 +1,6 @@
 /*
 ==============================================
-General Styling
+General styling
 ==============================================
 */
 html, body {
@@ -10,19 +10,40 @@ html, body {
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Arial;
 }
-h1, h2 {
+h1, h2, h4 {
   font-family: 'Lora', serif;
 }
-
+h3 {
+  font-weight: 200;
+}
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+section p {
+  text-align: justify;
+}
+.pad-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 /*
 ==============================================
-Navbar Styling
+Navbar styling
 ==============================================
 */
+.nav {
+  font-family: 'Lora', serif;
+  letter-spacing: 1px;
+}
 .navbar-default {
-  background-color: rgba(255, 255, 255, 0);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: transparent;
   border-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 .navbar-default .navbar-nav > li > a {
   color: #fff;
@@ -34,10 +55,14 @@ Navbar Styling
   color: #fff;
 }
 .navbar-default.affix {
-  background-color: white;
+  background-color: #27333e;
   border-color: rgba(34, 34, 34, 0.05);
 }
-
+.navbar-brand img {
+  width: 100px;
+  top: 5px;
+  position: absolute;
+}
 
 /*
 ==============================================
@@ -67,6 +92,7 @@ header {
 }
 header .time {
   margin-top: 30px;
+  font-family: 'Lora', serif;
   font-size: 16px;
 }
 header .time .title {
@@ -97,7 +123,84 @@ header .time .title {
 
 /*
 ==============================================
-Media Queries
+About section
+==============================================
+*/
+.about-page-left {
+  background: url(../img/about-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 45px;
+}
+
+.about-page-right img {
+  width: 520px;
+  position: relative;
+  left: -50px;
+  top: 40px;
+  outline: 3px solid rgba(255, 255, 255, 0.5);
+  outline-offset: -15px;
+}
+
+
+/*
+==============================================
+Menu
+==============================================
+*/
+#menu {
+    background-color: #fcfbf5;
+}
+.special-items img {
+  width: 100%;
+}
+.special-items .item-wrapper {
+  position: relative;
+}
+.special-items .item-wrapper:after {
+  content: '';
+  display: inline-block;
+  width: 90%;
+  height: 90%;
+  opacity: 0.2;
+  border: 1px solid white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transition: all 0.35s ease-in;
+  transition: all 0.35s ease-in
+}
+.special-items .item-wrapper:hover:after {
+  opacity: 0.8;
+  background-color: #c7a75b;
+  z-index: 1;
+}
+.special-items .item-wrapper .text {
+  color: #fff;
+  font-size: 10px;
+  position: absolute;
+  top: 10%;
+  padding: 12%;
+  width: 100%;
+  z-index: 2;
+}
+.special-items .item-wrapper h4{
+  font-weight: bold;
+  padding-bottom: 15px;
+  z-index: 2;
+}
+.special-items .item-wrapper .text p {
+  opacity: 0.6;
+}
+
+
+/*
+==============================================
+Media queries
 ==============================================
 */
 @media only screen and (min-width:320px) and (max-width: 900px)  {
@@ -106,9 +209,36 @@ Media Queries
   }
 }
 
+@media only screen and (min-width:1200px) {
+  .about-page-left {
+    background: url(../img/about-bg_2.jpg);
+  }
+}
+
 @media only screen and (max-width:414px) {
   #dish_1 {
     left: -60px;
     top: 280px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar-default {
+  background-color: #27333e;
+  }
+}
+@media only screen and (max-width: 991px) {
+  section {
+    padding-top: 20px;
+  }
+  .about-page-left {
+    padding: 25px;
+    background: none;
+  }
+  .about-page-right {
+    text-align: center;
+  }
+  .about-page-right img {
+    width: 90%;
+    left: 0;
   }
 }
