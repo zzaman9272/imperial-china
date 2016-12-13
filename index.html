@@ -8,9 +8,10 @@
     <title>Project</title>
 
     <!-- CSS files -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery.datetimepicker.min.css" type="text/css">
 
     <!-- Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" type="text/css">
@@ -49,7 +50,7 @@
               <a class="page-scroll" href="#gallery">Gallery</a>
             </li>
             <li>
-              <a class="page-scroll" href="#reservations">Reservations</a>
+              <a class="page-scroll" href="#reservation">Reservations</a>
             </li>
           </ul>
         </div> <!-- /.navbar-collapse -->
@@ -183,7 +184,7 @@
           <div class="container">
             <div class="row text-center">
               <div class="col-sm-12">
-                <h2>Full Menu</h2>
+                <h2>Dishes</h2>
               </div>
             </div>
             <div class="row">
@@ -441,13 +442,62 @@
         </div>
       </section>
 
+      <section id="reservation">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-sm-12">
+              <h2>Make a Reservation</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <form id="reservation-form" action="index.html" method="post">
+
+              <div class="col-xs-12 col-sm-6">
+                <input type="text" class="form-control" placeholder="Name" name="name" id="form-name" data-error="Subject field is required" required="">
+              </div>
+
+              <div class="col-xs-12 col-sm-6">
+                  <input type="text" class="form-control" placeholder="E-mail" name="email" id="form-subject" data-error="Subject field is required" required="">
+              </div>
+
+              <div class="col-xs-12 col-sm-4">
+                <input type="text" class="form-control" placeholder="Phone" name="phone" id="form-phone" data-error="Subject field is required" required="">
+              </div>
+
+              <div class="col-xs-12 col-sm-4 icon-box">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <input type="text" class="form-control rt-date" placeholder="Date" name="date" id="form-date" data-error="Subject field is required" required="">
+              </div>
+
+              <div class="col-xs-12 col-sm-4 icon-box">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <input type="text" class="form-control rt-time" placeholder="Time" name="time" id="form-time" data-error="Subject field is required" required="">
+              </div>
+
+              <div class="col-xs-12">
+                <textarea class="form-control" placeholder="Message" name="message" rows="3" id="form-message" data-error="Message field is required" required=""></textarea>
+              </div>
+
+              <div class="col-xs-12">
+                <button type="submit" class="book-now-btn">Reserve Table</button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
 
     <!-- JS files-->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/validator.js"></script>
     <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.datetimepicker.full.min.js"></script>
     <script src="js/main.js"></script>
+
 
   </body>
 
